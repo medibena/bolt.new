@@ -22,55 +22,55 @@ const customIconCollection = iconPaths.reduce(
 const BASE_COLORS = {
   white: '#FFFFFF',
   gray: {
-    50: '#FAFAFA',
-    100: '#F5F5F5',
-    200: '#E5E5E5',
-    300: '#D4D4D4',
-    400: '#A3A3A3',
-    500: '#737373',
-    600: '#525252',
-    700: '#404040',
-    800: '#262626',
-    900: '#171717',
-    950: '#0A0A0A',
+    50: '#F8FAFC',
+    100: '#F1F5F9',
+    200: '#E2E8F0',
+    300: '#CBD5E1',
+    400: '#94A3B8',
+    500: '#64748B',
+    600: '#475569',
+    700: '#334155',
+    800: '#1E293B',
+    900: '#0F172A',
+    950: '#020617',
   },
   accent: {
-    50: '#EEF9FF',
-    100: '#D8F1FF',
-    200: '#BAE7FF',
-    300: '#8ADAFF',
-    400: '#53C4FF',
-    500: '#2BA6FF',
-    600: '#1488FC',
-    700: '#0D6FE8',
-    800: '#1259BB',
-    900: '#154E93',
-    950: '#122F59',
+    50: '#F0F9FF',
+    100: '#E0F2FE',
+    200: '#BAE6FD',
+    300: '#7DD3FC',
+    400: '#38BDF8',
+    500: '#0EA5E9',
+    600: '#0284C7',
+    700: '#0369A1',
+    800: '#075985',
+    900: '#0C4A6E',
+    950: '#082F49',
   },
   green: {
-    50: '#F0FDF4',
-    100: '#DCFCE7',
-    200: '#BBF7D0',
-    300: '#86EFAC',
-    400: '#4ADE80',
-    500: '#22C55E',
-    600: '#16A34A',
-    700: '#15803D',
-    800: '#166534',
-    900: '#14532D',
-    950: '#052E16',
+    50: '#ECFDF5',
+    100: '#D1FAE5',
+    200: '#A7F3D0',
+    300: '#6EE7B7',
+    400: '#34D399',
+    500: '#10B981',
+    600: '#059669',
+    700: '#047857',
+    800: '#065F46',
+    900: '#064E3B',
+    950: '#022C22',
   },
   orange: {
-    50: '#FFFAEB',
-    100: '#FEEFC7',
-    200: '#FEDF89',
-    300: '#FEC84B',
-    400: '#FDB022',
-    500: '#F79009',
-    600: '#DC6803',
-    700: '#B54708',
-    800: '#93370D',
-    900: '#792E0D',
+    50: '#FFF7ED',
+    100: '#FFEDD5',
+    200: '#FED7AA',
+    300: '#FDBA74',
+    400: '#FB923C',
+    500: '#F97316',
+    600: '#EA580C',
+    700: '#C2410C',
+    800: '#9A3412',
+    900: '#7C2D12',
   },
   red: {
     50: '#FEF2F2',
@@ -105,10 +105,6 @@ export default defineConfig({
     'max-w-chat': 'max-w-[var(--chat-max-width)]',
   },
   rules: [
-    /**
-     * This shorthand doesn't exist in Tailwind and we overwrite it to avoid
-     * any conflicts with minified CSS classes.
-     */
     ['b', {}],
   ],
   theme: {
@@ -245,22 +241,6 @@ export default defineConfig({
   ],
 });
 
-/**
- * Generates an alpha palette for a given hex color.
- *
- * @param hex - The hex color code (without alpha) to generate the palette from.
- * @returns An object where keys are opacity percentages and values are hex colors with alpha.
- *
- * Example:
- *
- * ```
- * {
- *   '1': '#FFFFFF03',
- *   '2': '#FFFFFF05',
- *   '3': '#FFFFFF08',
- * }
- * ```
- */
 function generateAlphaPalette(hex: string) {
   return [1, 2, 3, 4, 5, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100].reduce(
     (acc, opacity) => {
