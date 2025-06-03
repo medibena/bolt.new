@@ -5,6 +5,11 @@ import {
   CodeMirrorEditor,
   type EditorDocument,
   type EditorSettings,
+
+  {isAnyActionRunning && (
+      <div className="i-svg-spinners:90-ring-with-bg text-bolt-elements-loader-progress text-lg"></div>
+    )}
+
   type OnChangeCallback as OnEditorChange,
   type OnSaveCallback as OnEditorSave,
   type OnScrollCallback as OnEditorScroll,
