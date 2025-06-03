@@ -38,6 +38,11 @@ export function HeaderActionButtons({}: HeaderActionButtonsProps) {
         >
           <div className="i-ph:code-bold" />
         </Button>
+        <div className="w-[1px] bg-bolt-elements-borderColor" />
+        <Button>
+          <div className="i-ph:palette text-sm" />
+          <span className="ml-1.5">Same Theme</span>
+        </Button>
       </div>
     </div>
   );
@@ -47,7 +52,7 @@ interface ButtonProps {
   active?: boolean;
   disabled?: boolean;
   children?: any;
-  onClick?: VoidFunction;
+  onClick?: () => void;
 }
 
 function Button({ active = false, disabled = false, children, onClick }: ButtonProps) {
