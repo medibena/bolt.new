@@ -24,16 +24,6 @@ interface WorkspaceProps {
 
 const viewTransition = { ease: cubicEasingFn };
 
-const sliderOptions: SliderOptions<WorkbenchViewType> = {
-  left: {
-    value: 'code',
-    text: 'Code',
-  },
-  right: {
-    value: 'preview',
-    text: 'Preview',
-  },
-};
 
 const workbenchVariants = {
   closed: {
